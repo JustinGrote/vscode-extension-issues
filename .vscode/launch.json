@@ -10,8 +10,24 @@
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
 			"args": [
+				"--disable-extensions",
 				"--extensionDevelopmentPath=${workspaceFolder}",
 				"--profile-temp"
+			],
+			"outFiles": [
+				"${workspaceFolder}/out/**/*.js"
+			],
+			"preLaunchTask": "npm: watch"
+		},
+		{
+			"name": "Run Extension [Isolated Profile]",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--disable-extensions",
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"--profile vscode-extension-issues"
 			],
 			"outFiles": [
 				"${workspaceFolder}/out/**/*.js"
